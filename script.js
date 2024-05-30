@@ -1,11 +1,11 @@
 ///////////////////////////
 /*INTRO TEXT*/
-//let userNameQuestion = prompt("Hello, what is your name?");
+/*let userNameQuestion = prompt("Hello, what is your name?");
 let userNameAnswer = document.createElement('h1');
 
 userNameAnswer.textContent = `${userNameQuestion}, Welcome to my Website`;
 
-document.body.appendChild(userNameAnswer);
+document.body.appendChild(userNameAnswer);*/
 
 
 /*HOMEPAGE COLOUR CHANGER*/
