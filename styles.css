@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  /*h1 {
+    color: var(--light-grey);
+    margin: 20px 0 40px 0;
+  }*/
+
+.intro{
+    padding: 20px;
+  text-align: center;
+  height: 90px;
+  width: 100%;
+}
+
+body {
+  /*background-color: var(--dark-grey);*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+
+/* Phone Container */
+
+.phone-container {
+  
+  width: 270px;
+  height: 460px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ border: 10px solid #008CBA;
+  background-color: #d1d1d1;
+  
+}
+
+label {
+  margin: 10px auto;
+  
+}
+
+.input {
+  font-family: inherit;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  text-align: center;
+  width: 80%;
+  height: 42px;
+  font-size: 16px;
+  border: 1px solid #000000;
+}
+
+.navButton {
+    background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  }
+ .navButton:hover {
+    background-color: #005f73;
+  }
+
+#check-btn-number {
+  background-color: #aeb3ff;
+}
+
+#clear-btn {
+  background-color: #fffaae; 
+}
+
+/* Phone Footer */
+.phone-footer {
+  background-color: #d1d1d1;
+}
+
+/* Results */
+#results-div {
+  
+  height: 200px;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/*COLOUR CHANGER*/
+.changeBackgroundColourText{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 4%;
+    /* font-size: medium; */
+    font-weight: bold;
+    font-style: italic;
+}
+.changeFontColourText{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 4%;
+    /* font-size: medium; */
+    font-weight: bold;
+    font-style: italic;
+}
+.backgroundcolorborderblack{
+	    border-radius: 100%;
+    padding: 3px;
+	    width: 30px;
+    height:30px;
+    border: 1px solid black;
+}
+.backgroundcolorborderwhite{
+	    border-radius: 100%;
+    padding: 3px;
+	    width: 30px;
+    height:30px;
+    border: 1px solid white;
+}
+
+/*purple*/
+.backgroundPurple{
+    background-color: purple;
+}
+#fontPurple{
+	color: purple;
+}
+.backgroundLavender{
+    background-color: lavender;
+}
+#fontLavender{
+    color: lavender;
+}
+
+/*blue*/
+.backgroundBlue{
+    background-color: blue;
+}
+#fontBlue{
+	color: blue;
+}
+.backgroundCyan{
+    background-color: cyan;
+}
+#fontCyan{color: cyan;}
+
+/*pink*/
+.backgroundPink{
+	background-color: pink;
+}
+#fontPink{
+	color: pink;
+}
+
+/*red*/
+.backgroundRed{
+    background-color: red;
+}
+#fontRed{
+    color: red;
+}
+.backgroundMaroon{
+    background-color: maroon;
+}
+#fontMaroon{
+    color: maroon;
+}
+
+/*green*/
+.backgroundGreen{
+    background-color: green;
+}
+#fontGreen{
+    color: green;
+}
+
+.backgroundOrange{
+    background-color: orange;
+}
+#fontOrange{
+    color: orange;
+}
+.backgroundYellow{
+    background-color: yellow;
+}
+#fontYellow{
+    color: yellow;
+}
+
+/*dark mode*/
+.backgroundBlack{
+		background-color: black;
+}
+.fontWhite{
+	color: white
+}
+
+/*white mode*/
+.backgroundWhite{
+	  background-color: white;
+}
+
+#fontBlack{
+    color: black;
+}
+.colordiv{
+    display: flex;
+    margin: 20px;
+padding: 10px;
+}
+.background{
+align-self: flex-start;
+margin-right: 350px;
+}
+.font{
+align-self: flex-end;
+margin-left: 550px;
+}
+
+.button{
+  cursor: pointer;
+  color: #0a0a23;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  margin: 20px;
+  font-size: 15px;
+}
+
+.converterTitle{
+  margin: 25px;
+}
+#romanH{
+  margin-top: 50px;
+}
+#linkedIn{
+    background-color: #0A66C2;
+    color: white;
+}
+#codepen{
+  background-color: white;
+}
+#gitHub{
+  background-color: black;
+  color: white;
+}
