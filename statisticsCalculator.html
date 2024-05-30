@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Statistics Calculator</title>
+    <nav class="intro">
+      <a href="./index.html" target="_blank"><button class="navButton">Homepage</button></a><a href="./spamFilter.html" target="_blank"><button class="navButton">Spam Filter</button></a><a href="./platformerGame.html" target="_blank"><button class="navButton">Platform Game</button></a><a href="./palindromeChecker.html" target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html"><button class="navButton">Roman Numeral Converter</button></a><a target="_blank" href="./TelephoneNumberChecker.html"><button class="navButton">Telephone Number Checker</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing Game</button></a>
+    </nav>
+  </head>
+  <body style="display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center;">
+    <h1>Statistics Calculator</h1>
+    <p>Enter a list of comma-separated numbers.</p>
+    <form onsubmit="calculate(); return false;">
+      <label for="numbers"></label>
+      <input type="text" name="numbers" id="numbers" />
+      <button type="submit" class="button">Calculate</button>
+    </form>
+    <div class="results">
+      <h2>Mean: <span id="mean"></span><br>
+        Median: <span id="median"></span><br>
+        Mode: <span id="mode"></span><br>
+        Range: <span id="range"></span><br>
+        Variance: <span id="variance"></span><br>
+        Standard Deviation: <span id="standardDeviation"></span>
+      </h2>
+    </div>
+    <script>
+      const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
+
+const getMedian = (array) => {
+  const sorted = array.slice().sort((a, b) => a - b);
+  const median =
+    array.length % 2 === 0
+      ? getMean([sorted[array.length / 2], sorted[array.length / 2 - 1]])
+      : sorted[Math.floor(array.length / 2)];
+  return median;
+}
+
+const getMode = (array) => {
+  const counts = {};
+  array.forEach((el) => {
+    counts[el] = (counts[el] || 0) + 1;
+  })
+  if (new Set(Object.values(counts)).size === 1) {
+    return null;
+  }
+  const highest = Object.keys(counts).sort(
+    (a, b) => counts[b] - counts[a]
+  )[0];
+  const mode = Object.keys(counts).filter(
+    (el) => counts[el] === counts[highest]
+  );
+  return mode.join(", ");
+}
+
+const getRange = (array) => {
+  return Math.max(...array) - Math.min(...array);
+}
+
+const getVariance = (array) => {
+  const mean = getMean(array);
+  const variance = array.reduce((acc, el) => {
+    const difference = el - mean;
+    const squared = difference ** 2;
+    return acc + squared;
+  }, 0) / array.length;
+  return variance;
+}
+
+const getStandardDeviation = (array) => {
+  const variance = getVariance(array);
+  const standardDeviation = Math.sqrt(variance);
+  return standardDeviation;
+}
+
+const calculate = () => {
+  const value = document.querySelector("#numbers").value;
+  const array = value.split(/,\s*/g);
+  const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
+  
+  const mean = getMean(numbers);
+  const median = getMedian(numbers);
+  const mode = getMode(numbers);
+  const range = getRange(numbers);
+  const variance = getVariance(numbers);
+  const standardDeviation = getStandardDeviation(numbers);
+
+  document.querySelector("#mean").textContent = mean;
+  document.querySelector("#median").textContent = median;
+  document.querySelector("#mode").textContent = mode;
+  document.querySelector("#range").textContent = range;
+  document.querySelector("#variance").textContent = variance;
+  document.querySelector("#standardDeviation").textContent = standardDeviation;
+}
+    </script>
+  </body>
+</html>

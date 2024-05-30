@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Learn Regular Expressions by Building a Spam Filter</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Spam Filter</title>
+    <nav class="intro">
+      <a href="./index.html" target="_blank"><button class="navButton">Homepage</button></a><a href="./statisticsCalculator.html" target="_blank"><button class="navButton">Statistics Calculator</button></a><a href="./platformerGame.html" target="_blank"><button class="navButton">Platform Game</button></a><a href="./palindromeChecker.html" target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html"><button class="navButton">Roman Numeral Converter</button></a><a target="_blank" href="./TelephoneNumberChecker.html"><button class="navButton">Telephone Number Checker</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing Game</button></a>
+    </nav>
+  </head>
+
+  <body style="display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center;">
+      <h1>Spam Filter</h1>
+
+      <label for="message-input"></label>
+      <br>
+      <textarea
+        placeholder="Enter message here"
+        value=""
+        type="text"
+        name="message"
+        id="message-input"
+        rows="10"
+        cols="40"
+      ></textarea>
+      <br>
+      <button class="button" id="check-message-btn">Check message</button>
+      <h2 id="result" style="font-size: 20px;"></h2>
+    <script>
+      const messageInput = document.getElementById("message-input");
+      const result = document.getElementById("result");
+      const checkMessageButton = document.getElementById("check-message-btn");
+      
+      const helpRegex = /please help|assist me/ig;//please help or assist me
+      const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion|trillion)? dollars|pounds/ig;//0-9 followed by words then currency
+      const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/ig;//free money
+      const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/ig;//stock alerts
+      const dearRegex = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:$|\s)/ig;// dear friend
+      
+      const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
+      
+      const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
+      
+      checkMessageButton.addEventListener("click", () => {
+        if (messageInput.value === "") {
+          alert("Please enter a message.");
+          return;
+        }
+      
+        result.textContent = isSpam(messageInput.value)
+          ? "Oh no! This looks like a spam message."
+          : "This message does not seem to contain any spam.";
+        messageInput.value = "";
+      });</script>
+  </body>
+</html>
