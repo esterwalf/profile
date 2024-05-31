@@ -124,13 +124,13 @@ label {
 }
 
 /*purple*/
-.backgroundPurple{
+.backgroundPurple, #backgroundPurple{
     background-color: purple;
 }
-#fontPurple{
+#fontpurple{
 	color: purple;
 }
-.backgroundLavender{
+.backgroundLavender, #backgroundLavender{
     background-color: lavender;
 }
 #fontLavender{
@@ -138,19 +138,19 @@ label {
 }
 
 /*blue*/
-.backgroundBlue{
+.backgroundBlue, #backgroundBlue{
     background-color: blue;
 }
 #fontBlue{
 	color: blue;
 }
-.backgroundCyan{
+.backgroundCyan, #backgroundCyan{
     background-color: cyan;
 }
 #fontCyan{color: cyan;}
 
 /*pink*/
-.backgroundPink{
+.backgroundPink, #backgroundPink{
 	background-color: pink;
 }
 #fontPink{
@@ -158,13 +158,13 @@ label {
 }
 
 /*red*/
-.backgroundRed{
+.backgroundRed, #backgroundRed{
     background-color: red;
 }
 #fontRed{
     color: red;
 }
-.backgroundMaroon{
+.backgroundMaroon, #backgroundMaroon{
     background-color: maroon;
 }
 #fontMaroon{
@@ -172,36 +172,36 @@ label {
 }
 
 /*green*/
-.backgroundGreen{
+.backgroundGreen, #backgroundGreen{
     background-color: green;
 }
 #fontGreen{
     color: green;
 }
 
-.backgroundOrange{
+.backgroundOrange, #backgroundOrange{
     background-color: orange;
 }
 #fontOrange{
     color: orange;
 }
-.backgroundYellow{
+.backgroundYellow, #backgroundYellow{
     background-color: yellow;
 }
 #fontYellow{
     color: yellow;
 }
 
-/*dark mode*/
-.backgroundBlack{
+/*dark mode - changed font to ID instead of class*/
+.backgroundBlack, #backgroundBlack{
 		background-color: black;
 }
-.fontWhite{
+#fontWhite{
 	color: white
 }
 
 /*white mode*/
-.backgroundWhite{
+.backgroundWhite, #backgroundWhite{
 	  background-color: white;
 }
 
