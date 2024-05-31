@@ -11,35 +11,34 @@
     <header>
     <div class="colordiv"  style="background-color: #0a0a23; color: #ffffff;">
       <div class="background">Background
-      <button class="backgroundcolorborderblack backgroundWhite" onMouseOver="changeToWhiteMode()" id="whiteMode"></button>
-      <button class="backgroundcolorborderblack backgroundYellow" onClick="changeBackgroundToYellow()" id="backgroundYellow"></button>
-                       <button class="backgroundcolorborderblack backgroundPink" onClick="changeBackgroundToPink()" id="backgroundPink"></button>
-      <button class="backgroundcolorborderwhite backgroundPurple" onclick="changeBackgroundToPurple()" id="backgroundPurple"></button>
-      <button class="backgroundcolorborderwhite backgroundLavender" onclick="changeBackgroundToLavender()" id="backgroundLavender"></button>
-      <button class="backgroundcolorborderwhite backgroundBlue" onclick="changeBackgroundToBlue()" id="backgroundBlue"></button>
-      <button class="backgroundcolorborderwhite backgroundCyan" onclick="changeBackgroundToCyan()" id="backgroundCyan"></button>
-      <button class="backgroundcolorborderwhite backgroundRed" onclick="changeBackgroundToRed()" id="backgroundRed"></button>
-      <button class="backgroundcolorborderwhite backgroundMaroon" onclick="changeBackgroundToMaroon()" id="backgroundMaroon"></button>
-      <button class="backgroundcolorborderwhite backgroundGreen" onclick="changeBackgroundToGreen()" id="backgroundGreen"></button>
-      <button class="backgroundcolorborderwhite backgroundOrange" onclick="changeBackgroundToOrange()" id="backgroundOrange"></button>
-                       <button onMouseOver="changeToDarkMode()" id="DarkMode" class="backgroundcolorborderwhite backgroundBlack fontWhite"></button>
-                      </div>
+      <button class="backgroundcolorborderblack backgroundWhite" id="backgroundWhite" onclick="changeColor('background', 'White')"></button><!--updated from id to class, added backgroundwhite ID-->
+      <button class="backgroundcolorborderblack backgroundYellow" id="backgroundYellow" onclick="changeColor('background', 'Yellow')"></button>
+      <button class="backgroundcolorborderblack backgroundPink" id="backgroundPink" onclick="changeColor('background', 'Pink')"></button>
+      <button class="backgroundcolorborderwhite backgroundPurple" id="backgroundPurple" onclick="changeColor('background', 'purple')"></button>
+      <button class="backgroundcolorborderwhite backgroundLavender" id="backgroundLavender" onclick="changeColor('background', 'Lavender')"></button>
+      <button class="backgroundcolorborderwhite backgroundBlue" id="backgroundBlue" onclick="changeColor('background', 'Blue')"></button>
+      <button class="backgroundcolorborderwhite backgroundCyan" id="backgroundCyan" onclick="changeColor('background', 'Cyan')"></button>
+      <button class="backgroundcolorborderwhite backgroundRed" id="backgroundRed" onclick="changeColor('background', 'Red')"></button>
+      <button class="backgroundcolorborderwhite backgroundMaroon" id="backgroundMaroon" onclick="changeColor('background', 'Maroon')"></button>
+      <button class="backgroundcolorborderwhite backgroundGreen" id="backgroundGreen" onclick="changeColor('background', 'Green')"></button>
+      <button class="backgroundcolorborderwhite backgroundOrange" id="backgroundOrange" onclick="changeColor('background', 'Orange')"> </button>
+ <button class="backgroundcolorborderwhite backgroundBlack fontWhite" id="backgroundBlack" onclick="changeColor('background', 'Black')"></button><!--added black background to on click & backgroundBlack ID-->
 <!--BACKGROUND COLOUR END-->
 
-<!--FONT COLOUR START-->
+<!--FONT COLOUR START--> 
 <div class="font">Font
-<button class="backgroundcolorborderwhite backgroundBlack" onclick="changeFontToBlack()" id="fontBlack"></button>
-<button class="backgroundcolorborderwhite backgroundOrange" onclick="changeFontToOrange()" id="fontorange"></button>
-<button class="backgroundcolorborderwhite backgroundGreen" onclick="changeFontToGreen()" id="fontGreen"></button>
-<button class="backgroundMaroon backgroundcolorborderwhite" onclick="changeFontToMaroon()" id="fontMaroon"></button>
-<button class="backgroundRed backgroundcolorborderwhite" onclick="changeFontToRed()" id="fontRed"></button>
-<button class="backgroundCyan backgroundcolorborderwhite" id="fontCyan" onClick="changeFontToCyan()"></button>
-<button class="backgroundBlue backgroundcolorborderwhite" id="fontBlue" onClick="changeFontToBlue()"></button>
-<button class="backgroundLavender backgroundcolorborderwhite" id="fontLavender" onClick="changeFontToLavender()"></button>
-      <button class="backgroundPurple backgroundcolorborderwhite" id="fontPurple" onClick="changeFontToPurple()"></button>
-  <button class="backgroundcolorborderblack backgroundPink" id="fontPink" onClick="ChangeFontToPink()"></button>
-  <button class="backgroundcolorborderblack backgroundYellow" id="fontYellowk" onClick="changeFontToYellow()"></button>
-<button class="backrgoundWhite backgroundcolorborderblack fontWhite" id="fontWhite" onClick="changeFontToWhite()"></button>
+<button class="backgroundcolorborderwhite backgroundBlack" id="fontBlack" onclick="changeColor('font', 'Black')"></button><!--changed white mode to class instead of ID-->
+<button class="backgroundcolorborderwhite backgroundOrange" id="fontOrange" onclick="changeColor('font', 'Orange')"></button>
+<button class="backgroundcolorborderwhite backgroundGreen" id="fontGreen" onclick="changeColor('font', 'Green')"></button>
+<button class="backgroundMaroon backgroundcolorborderwhite" id="fontMaroon" onclick="changeColor('font', 'Maroon')"></button>
+<button class="backgroundRed backgroundcolorborderwhite" id="fontRed" onclick="changeColor('font', 'Red')"></button>
+<button class="backgroundCyan backgroundcolorborderwhite" id="fontCyan" onclick="changeColor('font', 'Cyan')"></button>
+<button class="backgroundBlue backgroundcolorborderwhite" id="fontBlue" onclick="changeColor('font', 'Blue')"></button>
+<button class="backgroundLavender backgroundcolorborderwhite" id="fontLavender" onclick="changeColor('font', 'Lavender')"></button>
+      <button class="backgroundPurple backgroundcolorborderwhite" id="fontPurple" onclick="changeColor('font', 'purple')"></button>
+  <button class="backgroundcolorborderblack backgroundPink" id="fontPink" onclick="changeColor('font', 'Pink')"></button>
+  <button class="backgroundcolorborderblack backgroundYellow" id="fontYellow" onclick="changeColor('font', 'Yellow')"></button>
+<button class="backrgoundWhite backgroundcolorborderblack fontWhite" id="fontWhite" onclick="changeColor('font', 'White')"></button>
 </header>
 </head>
 <body>
