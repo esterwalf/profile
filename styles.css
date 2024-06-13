@@ -46,6 +46,16 @@ body {
   background: linear-gradient(to right,  #008CBA, blue); /* Gradient background */
 }
 
+#phone-container {
+  max-width: 50vw;/*changed from pixels to viewport width 13/06/2024*/
+  max-height: 40vw;/*changed from pixels to viewport width 13/06/2024*/
+  background-color: #ffffff;
+  color: #ffffff;
+  margin: 0.3vw auto 0vw;/*changed from pixels to viewport width 13/06/2024*/
+  padding: 1vw;/*changed from pixels to viewport width 13/06/2024*/
+  background-color:transparent; /*changed background colour 13/06/2024 */
+}/*mo
+
 /* Media query for screens smaller than 600px copy and paste in to github 13/06/2024 */
 @media only screen and (max-width: 600px) {
   .phone-container {
