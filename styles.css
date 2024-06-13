@@ -251,9 +251,9 @@ margin-left: 550px;
   color: #0a0a23;
   background-color: #feac32;
   background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
-  margin: 20px;
-  font-size: 15px;
+  border: 0.2vw solid #feac32;/*13/06/2024 changed from pixels to vw*/
+  margin: 0.5vw;/*13/06/2024 changed from pixels to vw*/
+  font-size: 0.9vw;/*13/06/2024 changed pixels to vw*/
 }
 
 .converterTitle{
