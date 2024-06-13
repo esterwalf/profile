@@ -14,6 +14,7 @@
 
   <body class="spamFilter">
       <h1>Spam Filter</h1>
+    <div id="monitorScreen">
 
       <label for="message-input"></label>
       <br>
@@ -28,7 +29,7 @@
       ></textarea>
       <br>
       <button class="button" id="check-message-btn">Check message</button>
-      <h2 id="result" style="font-size: 20px;"></h2>
+      <h2 id="result"class="spamResult"></h2></div><div id="monitorTopStand"></div><div id="monitorBottomStand"></div>
     <script>
       const messageInput = document.getElementById("message-input");
       const result = document.getElementById("result");
