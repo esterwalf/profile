@@ -1,4 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*statistics calculator start copy and paste into github 13/06/2024*/
+.calculatorBackground{
+  display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center;
+}
+.calculatorContainer {
+  background-color:  #008CBA;
+  border: 1px solid #000;
+  width: 100%;
+  max-width: 350px; 
+  max-height: 60vh;
+  height: 50%;
+  border-radius: 10px;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+.display {
+  background-color: white;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  width: 96%;
+  height: 10rem;
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: black;
+}
+
+.calculatorButton,
+.numberButtons .button {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.calculatorButton{
+  width: 55px;
+  height: 55px;
+  margin: 5px;
+  border-radius: 50%;
+  color: black;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #feac32;
+  border: 1rem solid black;
+}
+
+.calculatorResults{
+  margin-bottom: 40x;
+}
+
+.numberButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 70%;
+}
+
+.numberButtons .calculatorButton {
+  /*background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.statistics{
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  .calculatorButton,
+  .numberButtons .button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+/*statistics calculator end copy and paste into github 13/06/2024*/
+
+
+
+
 
 .telephoneTitle{
   color: white;
