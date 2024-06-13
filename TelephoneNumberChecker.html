@@ -75,8 +75,9 @@ h1{color: white;}
         const spacesDashes = '[\\s\\-]?';
         const phoneNumber = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
         const phoneRegex = new RegExp(`${countryCode}${areaCode}${spacesDashes}${phoneNumber}`);
-        phoneRegex.test(userInputValue) ? (resultsDiv.style.color = '#066637') : (resultsDiv.style.color = '#af0f0f');
+        phoneRegex.test(userInputValue) ? (resultsDiv.style.color = 'white') : (resultsDiv.style.color = 'white');
         resultsDiv.innerHTML = `${phoneRegex.test(userInputValue) ? "Valid" : "Invalid"} US number: ${userInputValue}`;
+         resultsDiv.style.fontSize = '24px';
       }
       </script>
   </body>
