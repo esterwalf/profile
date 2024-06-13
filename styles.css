@@ -8,7 +8,7 @@
 .intro{
     padding: 20px;
   text-align: center;
-  height: 90px;
+  max-height: 90px;
   width: 100%;
 }
 
