@@ -116,22 +116,22 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
 }
 
 /*COLOUR CHANGER*/
-.changeBackgroundColourText{
-    display: flex;
-    align-self: flex-end;
-    margin-right: 4%;
-    /* font-size: medium; */
-    font-weight: bold;
-    font-style: italic;
-}
-.changeFontColourText{
-    display: flex;
-    align-self: flex-start;
-    margin-left: 4%;
-    /* font-size: medium; */
-    font-weight: bold;
-    font-style: italic;
-}
+.changeBackgroundColourText,
+.changeFontColourText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Extend the background color */
+  padding: 20px 0; /* Add some vertical padding */
+  border-radius: 25px; /* Make the corners rounded */
+  background-color: #0a0a23; /* Set the background color */
+  font-size: 1.2em; /* Increase the font size */
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff; /* Change the font color to white for better contrast */
+  margin-bottom: 50px; /* Push the text lower on the page */
+}/*13/06/2024 merged colour texts into one css*/
+
 .backgroundcolorborderblack{
 	    border-radius: 100%;
     padding: 0.3vw;/*13/06/2024 changed from pixels to viewport width*/
