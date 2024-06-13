@@ -328,7 +328,7 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
   margin: 10px 0;
 }
 
-/*COLOUR CHANGER*/
+/*home page start*/
 .changeBackgroundColourText,
 .changeFontColourText {
   display: flex;
@@ -345,19 +345,66 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
   margin-bottom: 50px; /* Push the text lower on the page */
 }/*13/06/2024 merged colour texts into one css*/
 
+.changeBackgroundColourText,
+.changeFontColourText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Extend the background color */
+  padding: 20px 0; /* Add some vertical padding */
+  border-radius: 25px; /* Make the corners rounded */
+  background-color: #0a0a23; /* Set the background color */
+  font-size: 1.2em; /* Increase the font size */
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff; /* Change the font color to white for better contrast */
+  margin-bottom: 50px; /* Push the text lower on the page */
+}
+.colorDiv{
+  justify-content: center;
+  align-items: center;
+  gap:2px;
+  display: flex;
+  margin: auto;
+padding: 20px;
+width: 100%;
+background-color: #0a0a23; 
+color: #ffffff;
+}
+.background{
+/*align-self: flex-start;
+margin-right: 350px;*/
+text-align: center;
+margin-right: 10px;
+display: flex;/*13/06/2024 commented out previous CSS changed to display flex*/
+}
+.font{
+  text-align: center;
+display: flex;/*13/06/2024 commented out previous CSS changed to display flex*/
+margin-left:20px;
+margin-right: 10px;
+/*
+align-self: flex-end;
+margin-left: 550px;*/
+}
+
 .backgroundcolorborderblack{
 	    border-radius: 100%;
-    padding: 0.3vw;/*13/06/2024 changed from pixels to viewport width*/
-	    max-width: 30vw;/*13/06/2024 changed from pixels to viewport width*/
-    max-height:30vw;/*13/06/2024 changed from pixels to viewport width*/
-    border: 0.1vw solid black;/*13/06/2024 changed from pixels to viewport width*/
+    /* padding: 5%; */
+    width:2rem;
+    height:2rem;
+	    max-width: 5%;
+    max-height:5%;
+    border: 1% solid black;
 }
 .backgroundcolorborderwhite{
 	    border-radius: 100%;
-    padding: 0.3vw;/*13/06/2024 changed from pixels to viewport width*/
-	    max-width: 30vw;/*13/06/2024 changed from pixels to viewport width*/
-    max-height:30vw;/*13/06/2024 changed from pixels to viewport width*/
-    border: 0.1vw solid white;/*13/06/2024 changed from pixels to viewport width*/
+    /* padding: 5%; */
+    width:2rem;
+    height:2rem;
+	    max-width: 5%;
+    max-height:5%;
+    border: 1% solid white;
 }
 
 /*purple*/
@@ -445,19 +492,6 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
 #fontBlack{
     color: black;
 }
-.colordiv{
-    display: flex;
-    margin: 20px;
-padding: 10px;
-}
-.background{
-align-self: flex-start;
-margin-right: 350px;
-}
-.font{
-align-self: flex-end;
-margin-left: 550px;
-}
 
 .button{
   cursor: pointer;
@@ -486,3 +520,4 @@ margin-left: 550px;
   background-color: black;
   color: white;
 }
+/*homepage end*/
