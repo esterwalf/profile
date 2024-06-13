@@ -10,25 +10,13 @@
       <button class="navButton">Homepage</button></a><a href="spamFilter.html" target="_blank"><button class="navButton">Spam Filter</button></a><a href="./statisticsCalculator.html" target="_blank"><button class="navButton">Statistics Calculator</button></a><a href="./palindromeChecker.html" target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html" target="_blank"><button class="navButton">Roman Numeral Converter</button></a><a href="./platformerGame.html" target="_blank"><button class="navButton">Platformer Game</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing Game</button></a>
     </nav>
   </head>
-  <style>
-.button {
-  cursor: pointer;
-  color: #0a0a23;
-  background-color: #feac32;
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
-  font-size: 15px;
-}
-h1{color: white;}
-#results-div{color: black;}
-  </style>
   <body>
     <main>
-      <h1>Telephone Number Validator</h1>
+      <h1 class="telephoneTitle">Telephone Number Validator</h1>
       <div class="phone-container">
         <label for="user-input">Enter a Phone Number:</label>
         <input type="text" placeholder="Example: 1 555-555-5555" id="user-input" maxlength="20" value="" class="input"/>
-        <div id="results-div"></div>
+        <div id="results-div" class="telephoneResults"></div>
         <div class="phone-footer">
           <button  id="check-btn-number" class="button">Check</button>
           <button id="clear-btn" class="button">Clear</button>
