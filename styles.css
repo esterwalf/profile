@@ -26,19 +26,33 @@ body {
 /* Phone Container */
 
 .phone-container {
-  
-  max-width: 270px;
-  max-height: 460px;
-  margin: 30px auto;
+  /*removed extra css 13/06/2024 copy and paste from here*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- border: 10px solid #008CBA;
-  background-color: #d1d1d1;
-  
+  width: 30vw; /* Adjust width as needed */
+  height: 60vw; /* Adjust height to make it longer */
+  border-radius: 25px; /* Round the corners to mimic a phone's shape */
+  background-color: #fff; /* Set a background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for a 3D effect */
+  margin: auto; /* Center the container on the page */
+  padding: 20px; /* Add some padding inside the container */
+  border: 1vw solid #fff; /* Add a border to define the edges */
+  border-radius: 25px; /* Round the corners to mimic a phone's shape */
+  background-color: #fff; /* Set a background color */
+  margin: auto; /* Center the container on the page */
+  padding: 20px; /* Add some padding inside the container */
+  background: linear-gradient(to right,  #008CBA, blue); /* Gradient background */
 }
 
+/* Media query for screens smaller than 600px copy and paste in to github 13/06/2024 */
+@media only screen and (max-width: 600px) {
+  .phone-container {
+    width: 30vw; /* Increase width for smaller screens */
+    height: 60vw; /* Increase height for smaller screens */
+  }
+}
 label {
   margin: 10px auto;
   
