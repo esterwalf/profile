@@ -71,13 +71,13 @@ label {
 .input {
   font-family: inherit;
   display: block;
-  margin: 10px auto;
-  padding: 5px;
+ margin: 2vw auto;/*changed from pixels to viewport width 13/06/2024*/
+  padding: 0.5vw;/*changed from pixels to viewport width 13/06/2024*/
   text-align: center;
   width: 80%;
-  max-height: 42px;
-  font-size: 16px;
-  border: 1px solid #000000;
+  max-height: 4.0vw;/*changed from pixels to viewport width 13/06/2024*/
+  font-size: 1.2vw;/*changed from pixels to viewport width 13/06/2024*/
+  border: 0.1vw solid #0a0a23;/*changed from pixels to viewport width 13/06/2024*/
 }
 
 .navButton {
