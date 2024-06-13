@@ -12,6 +12,11 @@
   width: 100%;
 }
 
+img{
+  max-width: 13rem;
+  height: 15rem;
+}/*moved images to styles 13/06/2024*/
+
 body {
   /*background-color: var(--dark-grey);*/
   display: flex;
