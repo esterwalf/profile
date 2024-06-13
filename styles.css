@@ -134,17 +134,17 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
 }
 .backgroundcolorborderblack{
 	    border-radius: 100%;
-    padding: 3px;
-	    max-width: 30px;
-    max-height:30px;
-    border: 1px solid black;
+    padding: 0.3vw;/*13/06/2024 changed from pixels to viewport width*/
+	    max-width: 30vw;/*13/06/2024 changed from pixels to viewport width*/
+    max-height:30vw;/*13/06/2024 changed from pixels to viewport width*/
+    border: 0.1vw solid black;/*13/06/2024 changed from pixels to viewport width*/
 }
 .backgroundcolorborderwhite{
 	    border-radius: 100%;
-    padding: 3px;
-	    max-width: 30px;
-    max-height:30px;
-    border: 1px solid white;
+    padding: 0.3vw;/*13/06/2024 changed from pixels to viewport width*/
+	    max-width: 30vw;/*13/06/2024 changed from pixels to viewport width*/
+    max-height:30vw;/*13/06/2024 changed from pixels to viewport width*/
+    border: 0.1vw solid white;/*13/06/2024 changed from pixels to viewport width*/
 }
 
 /*purple*/
