@@ -39,15 +39,10 @@ body {
   width: 30vw; /* Adjust width as needed */
   height: 60vw; /* Adjust height to make it longer */
   border-radius: 25px; /* Round the corners to mimic a phone's shape */
-  background-color: #fff; /* Set a background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for a 3D effect */
   margin: auto; /* Center the container on the page */
-  padding: 20px; /* Add some padding inside the container */
+  padding: 1vw; /* Add some padding inside the container */
   border: 1vw solid #fff; /* Add a border to define the edges */
-  border-radius: 25px; /* Round the corners to mimic a phone's shape */
-  background-color: #fff; /* Set a background color */
-  margin: auto; /* Center the container on the page */
-  padding: 20px; /* Add some padding inside the container */
   background: linear-gradient(to right,  #008CBA, blue); /* Gradient background */
 }
 
