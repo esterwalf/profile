@@ -1,72 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta hhtp-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Telephone Number Validator</title>
-    <nav class="intro"><a href="./index.html" target="_blank">
-      <button class="navButton">Homepage</button></a><a href="spamFilter.html" target="_blank"><button class="navButton">Spam Filter</button></a><a href="./statisticsCalculator.html" target="_blank"><button class="navButton">Statistics Calculator</button></a><a href="./palindromeChecker.html" target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html" target="_blank"><button class="navButton">Roman Numeral Converter</button></a><a href="./platformerGame.html" target="_blank"><button class="navButton">Platformer Game</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing Game</button></a>
-    </nav>
-  </head>
-  <body>
-    <main>
-      <h1 class="telephoneTitle">Telephone Number Validator</h1>
-      <div class="phone-container">
-        <label for="user-input">Enter a Phone Number:</label>
-        <input type="text" placeholder="Example: 1 555-555-5555" id="user-input" maxlength="20" value="" class="input"/>
-        <div id="results-div" class="telephoneResults"></div>
-        <div class="phone-footer">
-          <button  id="check-btn-number" class="button">Check</button>
-          <button id="clear-btn" class="button">Clear</button>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta hhtp-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./CSS/telephoneNumberValidator.css" /><!--moved css to own file 29/06/2024-->
+  <title>Telephone Number Validator</title>
+  <nav class="intro">
+    <a href="./index.html" target="_blank"><button class="navButton">Homepage</button></a><a href="./spamFilter.html"
+      target="_blank"><button class="navButton">Spam Filter</button></a><a href="./palindromeChecker.html"
+      target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html"
+      target="_blank"><button class="navButton">Roman Numeral Converter</button></a><a href="./platformerGame.html"
+      target="_blank"><button class="navButton">Platformer Game</button></a><a href="./toDoApp.html"
+      target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html"
+      target="_blank"><button class="navButton">Role Playing Game</button></a>
+  </nav>
+</head>
+<!--removed button class as this seems to be a duplicate, moved heading to
+css and renamed to telephoneTitle class, moved results div to css and renamed telephoneResults 13/06/2024-->
+
+<body>
+  <main>
+    <h1 class="telephoneTitle">Telephone Number Validator</h1>
+    <div class="phone-container">
+      <label for="user-input">Enter a Phone Number:</label>
+      <input type="text" placeholder="Example: 1 555-555-5555" id="user-input" maxlength="20" value="" class="input" />
+      <div id="results-div" class="telephoneResults"></div>
+      <div><!--removed phone footer as this is removed in css 13/06/2024-->
+        <button id="check-btn-number" class="button">Check</button>
+        <button id="clear-btn" class="button">Clear</button>
       </div>
-    </main>
-    <script>/*TELEPHONE NUMBER CHECKER*/
-      // Set Up Constants
-      
-      const useruserInputValue = document.getElementById("user-input");
-      const checkBtn = document.getElementById("check-btn-number");
-      const clearBtn = document.getElementById("clear-btn");
-      const resultsDiv = document.getElementById("results-div");
-      
-      // Set Up Event Listeners
-      checkBtn.addEventListener("click", () => {
-        const userInputValue = useruserInputValue.value;
-      
-        // Check if there is user userInputValue
-        if (userInputValue.length === 0) {
-          alert("Please provide a phone number");
-        } else {
-          checkValidNumber(userInputValue);
-         useruserInputValue.value = ''; 
-        }
-      });
-      
-      useruserInputValue.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          checkValidNumber(useruserInputValue.value);
-          useruserInputValue.value = "";
-          
-        }
-      });
-      
-      clearBtn.addEventListener("click",() => {
-        resultsDiv.innerHTML = "";
-      });
-      
-      // Function to Check if Phone Number is Valid
-      function checkValidNumber(userInputValue) {
-        const countryCode = '^(1\\s?)?';
-        const areaCode = '(\\([0-9]{3}\\)|[0-9]{3})';
-        const spacesDashes = '[\\s\\-]?';
-        const phoneNumber = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
-        const phoneRegex = new RegExp(`${countryCode}${areaCode}${spacesDashes}${phoneNumber}`);
-        phoneRegex.test(userInputValue) ? (resultsDiv.style.color = 'white') : (resultsDiv.style.color = 'white');
-        resultsDiv.innerHTML = `${phoneRegex.test(userInputValue) ? "Valid" : "Invalid"} US number: ${userInputValue}`;
-         resultsDiv.style.fontSize = '24px';
-      }
-      </script>
-  </body>
+    </div>
+  </main>
+  <script src="./JavaScript/telephoneNumberValidator.js"></script><!--moved to js file 29/06/2024-->
+</body>
+
 </html>
