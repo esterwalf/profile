@@ -66,57 +66,6 @@
   color: black;
   font-size: 40px;
 }
- .spamFilter{
-  display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center;
- }/*added styling from spam filter class 13/06/2024*/
-
-#monitorScreen{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #008CBA;
-  padding: 20px; /* Add some padding inside the screen */
-  border-radius: 10px; 
-  border: 2vw solid #000; /* Add a border to mimic the edges of a monitor */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 40%; /* Set a default width */
-  height: 20vw;/* add height which is responsive*/
-  margin: auto;
-  margin-top: 50px; /* Push the monitor screen lower down */
- }
-
- #monitorTopStand {
-  width: 4vw;
-  height: 7vw;
-  background-color: #000;
-  border-radius: 10px;
-  margin-top: 0px; /* Add some space between the monitor screen and the stand */
-}
-
-#monitorBottomStand {
-  width: 15vw; /* Make it wider than the top part of the stand */
-  height: 2.5vw; /* Set the height to 3vw */
-  background-color: #000;
-  border-radius: 10px;
-}
- .spamResult{
-  font-size: 20px;
- }
-
- /* Styles for screens with a max width of 600px */
-@media only screen and (max-width: 600px) {
-  #monitorScreen {
-    width: 90%; /* Increase the width for smaller screens */
-  }
-  #monitorTopStand,
-  #monitorBottomStand {
-    width: 50%; /* Decrease the width for smaller screens */
-  }
-  .spamResult {
-    font-size: 16px; /* Decrease the font size for smaller screens */
-  }
-}
 
 .intro{
     padding: 20px;
