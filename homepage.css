@@ -1,0 +1,246 @@
+/*COLOUR CHANGER*/
+.changeBackgroundColourText,
+.changeFontColourText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Extend the background color */
+    padding: 20px 0;
+    /* Add some vertical padding */
+    border-radius: 25px;
+    /* Make the corners rounded */
+    background-color: #0a0a23;
+    /* Set the background color */
+    font-size: 1.2em;
+    /* Increase the font size */
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    /* Change the font color to white for better contrast */
+    margin-bottom: 50px;
+    /* Push the text lower on the page */
+}
+
+.colorDiv {
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #0a0a23;
+    color: #ffffff;
+}
+
+.background {
+    /*align-self: flex-start;
+margin-right: 350px;*/
+    text-align: center;
+    margin-right: 10px;
+    display: flex;
+}
+
+.font {
+    text-align: center;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
+    /*
+align-self: flex-end;
+margin-left: 550px;*/
+}
+
+.backgroundcolorborderblack {
+    border-radius: 100%;
+    /* padding: 5%; */
+    width: 2rem;
+    height: 2rem;
+    max-width: 5%;
+    max-height: 5%;
+    border: 1% solid black;
+}
+
+.backgroundcolorborderwhite {
+    border-radius: 100%;
+    /* padding: 5%; */
+    width: 2rem;
+    height: 2rem;
+    max-width: 5%;
+    max-height: 5%;
+    border: 1% solid white;
+}
+
+/*added background colour IDs to background color classes 31/05/2024*/
+/*purple*/
+.backgroundPurple,
+#backgroundPurple {
+    background-color: purple;
+}
+
+#fontpurple {
+    color: purple;
+}
+
+.backgroundLavender,
+#backgroundLavender {
+    background-color: lavender;
+}
+
+#fontLavender {
+    color: lavender;
+}
+
+/*blue*/
+.backgroundBlue,
+#backgroundBlue {
+    background-color: blue;
+}
+
+#fontBlue {
+    color: blue;
+}
+
+.backgroundCyan,
+#backgroundCyan {
+    background-color: cyan;
+}
+
+#fontCyan {
+    color: cyan;
+}
+
+/*pink*/
+.backgroundPink,
+#backgroundPink {
+    background-color: pink;
+}
+
+#fontPink {
+    color: pink;
+}
+
+/*red*/
+.backgroundRed,
+#backgroundRed {
+    background-color: red;
+}
+
+#fontRed {
+    color: red;
+}
+
+.backgroundMaroon,
+#backgroundMaroon {
+    background-color: maroon;
+}
+
+#fontMaroon {
+    color: maroon;
+}
+
+/*green*/
+.backgroundGreen,
+#backgroundGreen {
+    background-color: green;
+}
+
+#fontGreen {
+    color: green;
+}
+
+.backgroundOrange,
+#backgroundOrange {
+    background-color: orange;
+}
+
+#fontOrange {
+    color: orange;
+}
+
+.backgroundYellow,
+#backgroundYellow {
+    background-color: yellow;
+}
+
+#fontYellow {
+    color: yellow;
+}
+
+/*dark*/
+.backgroundBlack,
+#backgroundBlack {
+    background-color: black;
+}
+
+#fontWhite {
+    color: white
+}
+
+/*white*/
+.backgroundWhite,
+#backgroundWhite {
+    background-color: white;
+}
+
+#fontBlack {
+    color: black;
+}
+
+.button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 0.2vw solid #feac32;
+    margin: 0.5vw;
+    font-size: 0.9vw;
+}
+
+.converterTitle {
+    margin: 2vw;
+}
+
+#linkedIn {
+    background-color: #0A66C2;
+    color: white;
+}
+
+#codepen {
+    background-color: white;
+}
+
+#gitHub {
+    background-color: black;
+    color: white;
+}
+
+.responsive-image {
+    height: auto;
+    width: 100%;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 600px) {
+    .colorDiv {}
+
+    .background,
+    .font {
+        width: 100vw;
+        /* Adjusted styles for smaller screens */
+    }
+
+    button {
+        width: 100vw;
+        /* Adjusted button styles for mobile */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .certificationProjects .project-link,
+    .otherProjects .project-link {
+        margin: 0 !important;
+        width: 100%;
+    }
+}
