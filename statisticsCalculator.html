@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css" />
-    <meta hhtp-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Statistics Calculator</title>
-    <nav class="intro">
-      <a href="./index.html" target="_blank"><button class="navButton">Homepage</button></a><a href="./spamFilter.html" target="_blank"><button class="navButton">Spam Filter</button></a><a href="./platformerGame.html" target="_blank"><button class="navButton">Platform Game</button></a><a href="./palindromeChecker.html" target="_blank"><button class="navButton">Palindrome Checker</button></a><a href="./romanNumeralConverter.html"><button class="navButton">Roman Numeral Converter</button></a><a target="_blank" href="./TelephoneNumberChecker.html"><button class="navButton">Telephone Number Validator</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing Game</button></a>
-    </nav>
-    <style>
-      body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-    </style>
-  </head>
- <body class="calculatorBackground"><!--moved css to styles.css-->
-    <h1>Statistics Calculator</h1>
-    <!--calculator background start-->
-    <div class="calculator calculatorContainer">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta hhtp-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./CSS/statisticsCalculator.css" /><!--moved css to statistics calculator 29/06/2024-->
+  <title>Statistics Calculator</title>
+  <nav class="intro">
+    <a href="./index.html" target="_blank"><button class="navButton">Homepage</button></a><a href="./spamFilter.html"
+      target="_blank"><button class="navButton">Spam Filter</button></a><a href="./platformerGame.html"
+      target="_blank"><button class="navButton">Platform Game</button></a><a href="./palindromeChecker.html"
+      target="_blank"><button class="navButton">Palindrome Checker</button></a><a
+      href="./romanNumeralConverter.html"><button class="navButton">Roman Numeral Converter</button></a><a
+      target="_blank" href="./TelephoneNumberChecker.html"><button class="navButton">Telephone Number
+        Validator</button></a><a href="./toDoApp.html" target="_blank"><button class="navButton">To Do
+        App</button></a><a href="./rolePlayingGame.html" target="_blank"><button class="navButton">Role Playing
+        Game</button></a>
+  </nav>
+</head>
+
+<body class="calculatorBackground"><!--moved css to styles.css-->
+  <h1>Statistics Calculator</h1>
+  <!--calculator background start-->
+  <div class="calculator calculatorContainer">
     <form onsubmit="calculate(); return false;">
       <label for="numbers"></label>
       <div class="display">
@@ -32,110 +33,43 @@
           <p>(The other buttons are cosmetic)</p>
           <input type="text" name="numbers" id="numbers" />
           <button type="submit" class="button">Calculate</button>
-      </div>
         </div>
-         <div class="calculatorButtons">
+      </div>
+      <div class="calculatorButtons">
 
-  <div class="numberButtons">
-    <button type="button" class="calculatorButton">CE</button>
-    <button type="button" class="calculatorButton">C</button>
-    <button type="button" class="calculatorButton">7</button>
+        <div class="numberButtons">
+          <button type="button" class="calculatorButton">CE</button>
+          <button type="button" class="calculatorButton">C</button>
+          <button type="button" class="calculatorButton">7</button>
 
-    <button type="button" class="calculatorButton">8</button>
-    <button type="button" class="calculatorButton">9</button>
-    <button type="button" class="calculatorButton">4</button>
+          <button type="button" class="calculatorButton">8</button>
+          <button type="button" class="calculatorButton">9</button>
+          <button type="button" class="calculatorButton">4</button>
 
-    <button type="button" class="calculatorButton">5</button>
-    <button type="button" class="calculatorButton">6</button>
-    <button type="button" class="calculatorButton">1</button>
+          <button type="button" class="calculatorButton">5</button>
+          <button type="button" class="calculatorButton">6</button>
+          <button type="button" class="calculatorButton">1</button>
 
-    <button type="button" class="calculatorButton">2</button>
-    <button type="button" class="calculatorButton">3</button>
-    <button type="button" class="calculatorButton">0</button>
+          <button type="button" class="calculatorButton">2</button>
+          <button type="button" class="calculatorButton">3</button>
+          <button type="button" class="calculatorButton">0</button>
+        </div>
+      </div>
+
+      <div class="statistics">
+        <h2>
+          Mean: <span id="mean"></span><br>
+          Median: <span id="median"></span><br>
+          Mode: <span id="mode"></span><br>
+          Range: <span id="range"></span><br>
+          Variance: <span id="variance"></span><br>
+          Standard Deviation: <span id="standardDeviation"></span>
+        </h2>
+      </div>
   </div>
-</div>
 
-<div class="statistics">
-<h2>
-  Mean: <span id="mean"></span><br>
-  Median: <span id="median"></span><br>
-  Mode: <span id="mode"></span><br>
-  Range: <span id="range"></span><br>
-  Variance: <span id="variance"></span><br>
-  Standard Deviation: <span id="standardDeviation"></span>
-</h2>
-</div>
-</div>
+  </form>
+  <script src="./JavaScript/statisticsCalculator.js"></script><!--moved to js file 29/06/2024-->
+</body>
 
-</form>
-    <script>
-      const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
-
-const getMedian = (array) => {
-  const sorted = array.slice().sort((a, b) => a - b);
-  const median =
-    array.length % 2 === 0
-      ? getMean([sorted[array.length / 2], sorted[array.length / 2 - 1]])
-      : sorted[Math.floor(array.length / 2)];
-  return median;
-}
-
-const getMode = (array) => {
-  const counts = {};
-  array.forEach((el) => {
-    counts[el] = (counts[el] || 0) + 1;
-  })
-  if (new Set(Object.values(counts)).size === 1) {
-    return null;
-  }
-  const highest = Object.keys(counts).sort(
-    (a, b) => counts[b] - counts[a]
-  )[0];
-  const mode = Object.keys(counts).filter(
-    (el) => counts[el] === counts[highest]
-  );
-  return mode.join(", ");
-}
-
-const getRange = (array) => {
-  return Math.max(...array) - Math.min(...array);
-}
-
-const getVariance = (array) => {
-  const mean = getMean(array);
-  const variance = array.reduce((acc, el) => {
-    const difference = el - mean;
-    const squared = difference ** 2;
-    return acc + squared;
-  }, 0) / array.length;
-  return variance;
-}
-
-const getStandardDeviation = (array) => {
-  const variance = getVariance(array);
-  const standardDeviation = Math.sqrt(variance);
-  return standardDeviation;
-}
-
-const calculate = () => {
-  const value = document.querySelector("#numbers").value;
-  const array = value.split(/,\s*/g);
-  const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
-  
-  const mean = getMean(numbers);
-  const median = getMedian(numbers);
-  const mode = getMode(numbers);
-  const range = getRange(numbers);
-  const variance = getVariance(numbers);
-  const standardDeviation = getStandardDeviation(numbers);
-
-  document.querySelector("#mean").textContent = mean;
-  document.querySelector("#median").textContent = median;
-  document.querySelector("#mode").textContent = mode;
-  document.querySelector("#range").textContent = range;
-  document.querySelector("#variance").textContent = variance;
-  document.querySelector("#standardDeviation").textContent = standardDeviation;
-}
-    </script>
-  </body>
 </html>
