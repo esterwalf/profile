@@ -1,0 +1,217 @@
+.romanBuilding {
+  position: relative;
+  width: 300px;
+  /* Adjust the width as needed */
+  margin: 20px auto;
+}
+
+.romanPediment {
+  position: absolute;
+  top: 130px;
+  /* Adjust the distance from the top as needed */
+  left: 50%;
+  right: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 350px solid transparent;
+  border-right: 350px solid transparent;
+  border-bottom: 145px solid #808080;
+}
+
+.romanPediment::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 35px;
+  /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 200px solid transparent;
+  /* Smaller width */
+  border-right: 200px solid transparent;
+  /* Smaller width */
+  border-bottom: 80px solid #313030;
+  /* Dark color for the inner triangle */
+}
+
+.romanPediment::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 60px;
+  /* Position the circle in the center of the inner triangle */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  /* Diameter of the circle */
+  height: 40px;
+  background-color: #808080;
+  /* Circle color */
+  border-radius: 50%;
+}
+
+/* Column top */
+.columnTop {
+  position: absolute;
+  width: 70px;
+  /* Slightly wider than the column width for a slight overhang */
+  height: 50px;
+  /* Half-circle height */
+  background-color: #808080;
+  /* Top color */
+  border-radius: 0 0 45px 45px;
+  /* Full circle radius on the top half */
+  z-index: 2;
+  /* Ensure the top is above the column */
+}
+
+/* Left column top */
+.columnTop.left {
+  left: 50%;
+  /* Center relative to the container */
+  transform: translateX(-290px);
+  /* Adjust so it's centered above the left column */
+  margin-top: 210px;
+  /* Position above the column */
+}
+
+/* Right column top */
+.columnTop.right {
+  left: 50%;
+  /* Center relative to the container */
+  transform: translateX(210px);
+  /* Adjust so it's centered above the right column */
+  margin-top: 210px;
+  /* Position above the column */
+}
+
+/* Inner semi-circle pseudo-class */
+.columnTop::after {
+  content: "";
+  position: absolute;
+  width: 35px; /* Adjust the width as needed */
+  height: 17.5px; /* Half of the width to create a perfect semi-circle */
+  background-color: #313030; /* Inner semi-circle color */
+  border-radius: 0 0 35px 35px; /* Full circle radius on the bottom half */
+  left: 50%;
+  transform: translateX(-50%); /* Center the semi-circle */
+  margin-top: 10px; /* Adjust the position above the column */
+  z-index: 3; /* Ensure the semi-circle is above the column tops */
+}
+
+/* Column bottom */
+.romanColumn {
+  position: absolute;
+  top: 260px;
+  /* Adjust so it's below the pediment and above the content */
+  height: 300px;
+  /* Height of the column */
+  width: 40px;
+  /* Width of the column */
+  background-color: #808080;
+  /* Column color */
+  z-index: 1;
+}
+
+/* Left column */
+.romanColumn.left {
+  left: 50%;
+  /* Center relative to the container */
+  transform: translateX(-275px);
+  /* Offset to the left */
+  margin-top: 50px;
+}
+
+/* Right column */
+.romanColumn.right {
+  left: 50%;
+  /* Center relative to the container */
+  transform: translateX(225px);
+  /* Offset to the right */
+  margin-top: 50px;
+}
+
+/* Add lines to columns */
+.romanColumn::before,
+.romanColumn::after {
+  content: "";
+  position: absolute;
+  left:50%;
+  top: 0;
+  width: 100%;
+  /* Full width of the column */
+  height: 2px;
+  /* Thickness of the line */
+  background-color: #313030;
+  /* Line color */
+  transform: translateY(-1px);
+}
+
+.romanColumn::before,
+.romanColumn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 2px; /* Thickness of the line */
+  height: 100%; /* Full height of the column */
+  background-color: #313030; 
+}
+
+.converterContent {
+  position: relative;
+  top: 100px;
+  /* Adjust so it's below the pediment */
+}
+
+.buildingTitle {
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+.buildingText {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.converterInput {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.converterOutput {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.body {
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+
+/*mobile friendly*/
+@media (max-width: 600px) {
+  .buildingTitle {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .buildingText {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .romanPediment {
+    top: 80px;
+  }
+  .columnTop {
+    width: 50px; /* Adjust width */
+    height: 35px;
+  }
+  .romanColumn {
+    top: 200px; /* Adjust position */
+  height: 200px; 
+  }
+}

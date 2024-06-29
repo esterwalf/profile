@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --main-bg-color: #0a0a23;
+    --section-bg-color: #ffffff;
+    --golden-yellow: #feac32;
+  }
+
+  .body {
+    background-color: var(--main-bg-color);
+  }
+
+  .start-screen {
+    max-width: 500px;
+    max-height: 400px;
+    background-color: #ffffff;
+color: #ffffff;
+    margin: 50px auto 0px;
+    padding: 20px;
+    border: solid black 2px;
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .instructions {
+    text-align: center;
+    margin: 20px;
+    line-height: 2rem;
+    background-color: #ffffff;
+    color: #ffffff;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+
+  }
+
+  .btn {
+    cursor: pointer;
+    width: 100px;
+    margin: 10px;
+    color: #0a0a23;
+    font-size: 18px;
+    background-color: var(--golden-yellow);
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border-color: var(--golden-yellow);
+    border-width: 3px;
+  }
+
+  .btn:hover {
+    background-image: linear-gradient(#ffcc4c, #f89808);
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkpoint-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    background-color: var(--section-bg-color);
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+  }
+
+  #canvas {
+    display: none;
+  }
+
+  h1, h2{
+    color: black;
+  }
+
+  h2{
+    font-size: 25px; 
+    background-color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .start-screen {
+      width: 60%;
+      max-width: 700px;
+    }
+
+    .checkpoint-screen {
+      max-width: 300px;
+    }
+  }

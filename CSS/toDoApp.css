@@ -1,0 +1,63 @@
+/*to do app start*/
+.todo-app::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+  }
+  
+  .todo-app {
+    border: 1px solid #008CBA;
+    background-color: #0a0a23;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  /* Title with larger, bold font */
+  .todo-app,
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+  }
+  
+  /* Style for the task input form */
+  .task-form {
+    display: none;
+    background-color: #FFFFFF;
+  }
+  
+  /* Style for the task list container */
+  #tasks-container {
+    list-style-type: none;
+    padding: 0;
+    background-color: #FFFFFF;
+  }
+  
+  /* Style for each task */
+  #tasks-container div {
+    border-top: 1px solid #000;
+    padding-left: 30px;
+    height: 25px;
+    color: #000000;
+  }
+  
+  /* Circular checkboxes before each task */
+  #tasks-container div:before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: -25px;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  
+  /*to do app end*/
