@@ -132,3 +132,9 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
 .converterTitle{
   margin: 25px;
 }
+/*general css file*/
+@media (prefers-color-scheme: dark) {
+  body {
+    font-weight: 350;
+  }
+}/*01/07/2024 added dark mode for font changes*/
