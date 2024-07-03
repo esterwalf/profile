@@ -101,24 +101,6 @@ padding: 0.1vw 0.2vw;/*changed from pixels to viewport width 13/06/2024*/
  .navButton:hover {
     background-color: #005f73;
   }
-
-#check-btn-number {
-  background-color: #aeb3ff;
-}
-
-#clear-btn {
-  background-color: #fffaae; 
-}
-
-/* Results */
-#results-div {
-  
-  max-height: 200px;
-  width: 100%;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 10px 0;
-}
 .button{
   cursor: pointer;
   color: #0a0a23;
