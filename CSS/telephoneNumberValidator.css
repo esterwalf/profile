@@ -66,5 +66,22 @@
     font-size: 1.2vw;
     border: 0.1vw solid #0a0a23;
   }
-  
+
+#clear-btn {
+  background-color: #fffaae;
+}
+
+#check-btn-number {
+  background-color: #aeb3ff;
+}
+
+/* Results */
+#results-div {
+
+  max-height: 20vw;
+  width: 100%;
+  font-size: 0.1vw;
+  text-align: center;
+  margin: 0.1vw 0;
+}  
   /*telephone number validator end*/
